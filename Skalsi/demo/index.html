@@ -1,0 +1,113 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>concentration game with cards</title>
+  <meta name="description" content="Quizy jquery plugin for creating memory game (concentration gaim, pairs game)">
+  <meta name="keywords" content="jquery plugin, memory game, concentration, pairs game, javascript, jquery" />
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../css/quizymemorygame.css">
+  
+  <style>
+    body{
+      font-family:Helvetica, Arial, Verdana;
+      text-align: center;
+    }
+    
+    #tutorial-memorygame{
+      margin:auto;
+      width:780px;
+    }
+    
+    .text-style1{
+      font-size:14pt;
+      color:#F0E68C;
+      font-weight:normal;
+      text-shadow: 1px 1px 1px #fff;
+      margin:0;
+      line-height:24pt;
+    }
+    
+    .reset-button{
+      margin: 0 0 1.5em 0;
+    }
+    
+  </style>
+
+</head>
+<body>
+  
+  <h1>GAME OF CONCENTRATION WITH CARDS</h1>
+  
+  <div id="main" role="main">
+    
+    <div id="tutorial-memorygame" class="quizy-memorygame">
+      <ul>
+          <li class="match1">
+            <img src="img/one.png">
+          </li>
+          <li class="match2">
+            <img src="img/two.png">
+          </li>
+          <li class="match3">
+            <img src="img/three.png">
+          </li>
+          <li class="match4">
+            <img src="img/four.png">
+          </li>
+          <li class="match5">
+            <img src="img/five.jpg">
+          </li>
+          <li class="match6">
+            <img src="img/six.png">
+          </li>
+          <li class="match1">
+            <img src="img/one.png"></p>
+          </li>
+          <li class="match2">
+           <img src="img/two.png"></p>
+          </li>
+          <li class="match3">
+           <img src="img/three.png"></p>
+          </li>
+          <li class="match4">
+            <img src="img/four.png"></p>
+          </li>
+          <li class="match5">
+            <img src="img/five.jpg"></p>
+          </li>
+          <li class="match6">
+            <img src="img/six.png"></p>
+          </li>
+      </ul>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	 <br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
+    <div class="reset-button">
+      <a id="restart" href="">Restart game</a>
+    </div>
+    
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="../js/jquery-ui-1.8.17.custom.min.js"></script>
+  
+  <script src="../js/jquery.flip.min.js"></script>
+  <script src="../js/jquery.quizymemorygame.js"></script>
+  
+  <script>
+    var quizyParams = {itemWidth: 160, itemHeight: 160, itemsMargin:40, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, randomised:true }; 
+    $('#tutorial-memorygame').quizyMemoryGame(quizyParams);
+    $('#restart').click(function(){
+      $('#tutorial-memorygame').quizyMemoryGame('restart');
+      return false;
+    });
+  </script>
+
+</body>
+</html>
